@@ -71,6 +71,17 @@
       "type": "string",
       "minLength": 8,
       "maxLength": 12
+    },
+    "citas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cita.cita",
+      "mappedBy": "cliente"
+    },
+    "tratamiento": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tratamiento.tratamiento"
     }
   }
 }

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tratamientos",
+  "info": {
+    "singularName": "tratamiento",
+    "pluralName": "tratamientos",
+    "displayName": "Tratamiento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre_Tratamiento": {
+      "type": "string",
+      "required": false,
+      "maxLength": 40
+    },
+    "Costo_Tratamiento": {
+      "type": "decimal",
+      "min": 0,
+      "max": 9999999
+    }
+  }
+}
