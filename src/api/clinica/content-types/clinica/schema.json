@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clinicas",
+  "info": {
+    "singularName": "clinica",
+    "pluralName": "clinicas",
+    "displayName": "Clinica"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Direccion_Clinica": {
+      "type": "string",
+      "required": false,
+      "maxLength": 40
+    },
+    "No_Telefono_Clinica": {
+      "type": "string",
+      "maxLength": 12,
+      "minLength": 8,
+      "required": true
+    }
+  }
+}
