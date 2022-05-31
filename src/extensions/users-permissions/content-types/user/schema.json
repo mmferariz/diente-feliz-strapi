@@ -63,25 +63,22 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "Edad_Paciente": {
-      "type": "integer",
-      "max": 99
-    },
-    "No_Telefono_Paciente": {
+    "No_Telefono_Doctor": {
       "type": "string",
       "minLength": 8,
       "maxLength": 12
+    },
+    "Cedula": {
+      "type": "string",
+      "required": true,
+      "maxLength": 8,
+      "minLength": 6
     },
     "citas": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::cita.cita",
-      "mappedBy": "cliente"
-    },
-    "tratamiento": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::tratamiento.tratamiento"
+      "mappedBy": "doctor"
     }
   }
 }

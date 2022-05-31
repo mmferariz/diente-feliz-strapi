@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  doctor controller
+ *  cliente controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::doctor.doctor');
+module.exports = createCoreController('api::cliente.cliente');

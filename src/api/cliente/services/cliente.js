@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * doctor service.
+ * cliente service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::doctor.doctor');
+module.exports = createCoreService('api::cliente.cliente');

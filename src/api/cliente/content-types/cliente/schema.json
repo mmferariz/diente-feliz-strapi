@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "Cliente",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre_Paciente": {
+      "type": "string",
+      "required": true,
+      "maxLength": 40,
+      "minLength": 3
+    },
+    "RFC_Cliente": {
+      "type": "string",
+      "required": true,
+      "maxLength": 13,
+      "minLength": 10
+    },
+    "Edad_Paciente": {
+      "type": "integer",
+      "required": true,
+      "max": 150,
+      "min": 0
+    },
+    "No_Telefono_Cliente": {
+      "type": "string",
+      "required": false,
+      "maxLength": 10
+    },
+    "tratamiento": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tratamiento.tratamiento"
+    },
+    "citas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cita.cita",
+      "mappedBy": "cliente"
+    }
+  }
+}

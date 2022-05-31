@@ -17,12 +17,6 @@
       "required": true,
       "default": "2022-05-01T05:00:00.000Z"
     },
-    "cliente": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "citas"
-    },
     "clinica": {
       "type": "relation",
       "relation": "oneToOne",
@@ -30,8 +24,15 @@
     },
     "doctor": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::doctor.doctor"
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "citas"
+    },
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cliente.cliente",
+      "inversedBy": "citas"
     }
   }
 }
